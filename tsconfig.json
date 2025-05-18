@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "outDir": "build",
+      "target": "esnext",
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext",
+      "sourceMap": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true
+    },
+    "exclude": [
+      "node_modules"
+    ]
+  }

@@ -1,0 +1,25 @@
+{
+  "name": "skinzone",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studiosok/SkinZone.git"
+  },
+  "author": "Kristen Studioso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/studiosok/SkinZone/issues"
+  },
+  "homepage": "https://github.com/studiosok/SkinZone#readme",
+  "dependencies": {
+    "@types/hapi": "^18.0.14",
+    "got": "^14.4.7",
+    "hapi": "^18.1.0"
+  }
+}
