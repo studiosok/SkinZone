@@ -1,5 +1,5 @@
 import * as Hapi from 'hapi';
-import { dataRoutes } from './src/data/dataRoutes.js';
+import { routes } from './src/routes.js';
 
 const port = 4000;
 const host = '0.0.0.0';
@@ -8,6 +8,6 @@ const server = new Hapi.Server({
     host: host
 });
 
-server.route(dataRoutes);
+server.route(routes);
 
 export default server;

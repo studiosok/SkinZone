@@ -5,6 +5,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "serve": "node ./build/index.js",
+    "dev": "tsx ./index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +23,11 @@
   "dependencies": {
     "@types/hapi": "^18.0.14",
     "got": "^14.4.7",
-    "hapi": "^18.1.0"
+    "hapi": "^18.1.0",
+    "tsc": "^2.0.4",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.4"
   }
 }
