@@ -21,13 +21,14 @@
   },
   "homepage": "https://github.com/studiosok/SkinZone#readme",
   "dependencies": {
+    "@hapi/hapi": "^21.4.0",
     "@types/hapi": "^18.0.14",
     "got": "^14.4.7",
-    "hapi": "^18.1.0",
     "tsc": "^2.0.4",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
+    "joi": "^17.13.3",
     "tsx": "^4.19.4"
   }
 }

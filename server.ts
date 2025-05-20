@@ -1,4 +1,4 @@
-import * as Hapi from 'hapi';
+import * as Hapi from '@hapi/hapi';
 import { routes } from './src/routes.js';
 
 const port = 4000;
