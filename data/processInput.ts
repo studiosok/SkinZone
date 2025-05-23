@@ -1,7 +1,10 @@
 export const normalizeInput = (input: string): string[] => {
     const semiPattern = /[;]/gm;
-    const patternMatchedInput = input.replaceAll(semiPattern, ',').split(', ');
-
+    const lineBreakPattern = /\n/gm;
+    const patternMatchedInput = input.toLowerCase()
+        .replaceAll(semiPattern, ',')
+        .replaceAll(lineBreakPattern, '')
+        .split(', ');
     const finalInput: string[] = []
     for (const word of patternMatchedInput) {
         const tempWord: string[] = [];

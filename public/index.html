@@ -4,26 +4,39 @@
         <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="styles.css" />
-        <script type="text/javascript" src="site.js" delay></script>
-        <!-- <script type="text/javascript" src="/build/web/site.js" defer></script> -->
+        <script type="text/javascript" src="site.js"></script>
+        <title>Allergen Checker</title>
     </head>
     <body>
-        <div id="wrapper">
-            <h1>Allergen Checker</h1>
-            <h3>Input product ingredients below</h3>
+        <div id="grid-container">
+            <h1 id="header">Allergen Checker</h1>
             <div id="formContainer">
                 <form id="textForm" action="">
-                    <input type="text" id="ingredients">
-                    <input type="button" onclick="submitText()" value="Search">
+                    <textarea id="ingredients" placeholder="Add ingredients here" onkeypress="return listenForEnter(event)"></textarea>
+                </form>
+            </div>
+            <div id="buttonContainer">
+                <form id="submitForm">
+                    <input type="button" id="submitButton" onclick="submitText()" value="Search">
                 </form>
             </div>
         </div>
 
         <div id="results">
-            <h2 id="safeText"></h2>
+            <h3 id="safeText"></h3>
             <ul id="allergenText">
-                <li></li>
             </ul>
         </div>
+        <script>
+            function listenForEnter(e) {
+                e = e || window.event;
+                if (e.keyCode === 13) {
+                    document.getElementById('submitButton').click();
+                    document.getElementById('ingredients').value = '';
+                    return false;
+                }
+                return true;
+            }
+        </script>
     </body>
 </html>

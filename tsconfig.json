@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-      "outDir": "build",
+      "outDir": "./build",
       "target": "esnext",
       "module": "NodeNext",
       "moduleResolution": "NodeNext",
@@ -9,9 +9,11 @@
       "sourceMap": true,
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
-      "allowSyntheticDefaultImports": true
+      "allowSyntheticDefaultImports": true,
+      "allowJs": true
     },
     "exclude": [
-      "node_modules"
+      "./node_modules",
+      "./build/**/*",
     ]
   }

@@ -20,10 +20,22 @@ const submitText = async () => {
     }
 
 const populateResults = async (response) => {
+    // clear input box
+    document.getElementById('ingredients').value = '';
+    
     const allergens = response.allergens
     document.getElementById('safeText').innerHTML = response.safe ? 'Allergen free!' : 'Allergen(s) found:';
     const list = document.getElementById('allergenText');
+
+    // clean list of previous search's allergens
+    if (list.firstChild) {
+        while (list.firstChild) {
+            list.removeChild(list.firstChild);
+        }
+    }
+    // populate new list of allergens
     if (!response.safe) {
+
         for (i = 0; i < allergens.length; i++) {
             let li = document.createElement('li');
             li.innerText = allergens[i];
@@ -31,3 +43,5 @@ const populateResults = async (response) => {
         }
     }
 }
+
+window.submitText = submitText;

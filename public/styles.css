@@ -1,0 +1,47 @@
+* {
+    margin: .5em;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
+        gap: 1em;
+}
+
+.header {
+    grid-area: header;
+}
+
+#formContainer {
+    grid-area: main;
+    margin: 2em;
+}
+
+h3 {
+    grid-area: main;
+}
+
+#ingredients {
+     width: 50%;
+     height: 200px;
+}
+
+#buttonContainer {
+    grid-area: main;
+    margin: 2em;
+    margin-left: 25%;
+}
+
+#results {
+    grid-area: main;
+    margin: 2em;
+}
