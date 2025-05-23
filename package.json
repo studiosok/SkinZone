@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf build/",
-    "copy-files": "copyfiles -u 1 public/**/*.html public/**/*.css build/public/",
+    "copy-files": "copyfiles -u 1 public/**/*.html public/**/*.css public/**/*.js build/public/",
     "build": "yarn clean && tsc && yarn copy-files",
     "serve": "node build/server.js",
     "dev": "tsx ./server.ts",

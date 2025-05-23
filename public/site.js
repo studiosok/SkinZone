@@ -43,5 +43,3 @@ const populateResults = async (response) => {
         }
     }
 }
-
-window.submitText = submitText;
