@@ -1,13 +1,9 @@
-import * as Hapi from '@hapi/hapi';
-import { routes } from './src/routes.js';
+import app from './app.js';
 
-const port = 4000;
-const host = '0.0.0.0';
-const server = new Hapi.Server({
-    port: port,
-    host: host
+const server = app.listen(app.get('port'), () => {
+    const port = app.get('port');
+    const environment = app.get('env');
+    console.log(`App is running at ${port}, in ${environment} env.`);
 });
-
-server.route(routes);
 
 export default server;

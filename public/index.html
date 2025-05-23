@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <script type="text/javascript" src="site.js" delay></script>
+        <!-- <script type="text/javascript" src="/build/web/site.js" defer></script> -->
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Allergen Checker</h1>
+            <h3>Input product ingredients below</h3>
+            <div id="formContainer">
+                <form id="textForm" action="">
+                    <input type="text" id="ingredients">
+                    <input type="button" onclick="submitText()" value="Search">
+                </form>
+            </div>
+        </div>
+
+        <div id="results">
+            <h2 id="safeText"></h2>
+            <ul id="allergenText">
+                <li></li>
+            </ul>
+        </div>
+    </body>
+</html>
