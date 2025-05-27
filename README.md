@@ -7,12 +7,17 @@ TODO:
 - ~~fix bug to normalize ingredient input to only ingredients separated by comma (separation by semi-colon doesn't work)~~
 - ~~hitting enter does not submit input -> fix~~
 - ~~clear input after submit~~
-- error handling
 - ~~clear list on new submit~~
 - input validation
-    - validate input is long enough
-    - validation input needs 'normalization' / replaceAll methods
-    - dedupe input
-    - remove linebreaks where present
+    - ~~validate input is long enough~~
+    - ~~validation input needs 'normalization' / replaceAll methods~~
+    - ~~remove periods from end of list~~
+    - ~~dedupe input~~
+    - ~~remove linebreaks where present~~
 - unit tests
+- error handling
 - styling
+- ~~dedupe possible and found allergen lists~~
+- ~~populate full possible text~~
+
+- ~~Two part search - initial search as is; second search more sensitive, flags possible allergens for further (human) review~~

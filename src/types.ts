@@ -7,4 +7,5 @@ export type SearchReqBody = { body: string }
 export interface SearchResBody extends Response { 
     safe: boolean,
     allergens: [string]
+    risks: string[][]
 }

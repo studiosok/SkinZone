@@ -24,7 +24,9 @@ const populateResults = async (response) => {
     document.getElementById('ingredients').value = '';
     
     const allergens = response.allergens
-    document.getElementById('safeText').innerHTML = response.safe ? 'Allergen free!' : 'Allergen(s) found:';
+    const risks = response.risks
+    document.getElementById('safeText').innerHTML = response.safe ? 'Allergen free!' : 'Potential allergen(s) found:';
+
     const list = document.getElementById('allergenText');
 
     // clean list of previous search's allergens
@@ -35,10 +37,18 @@ const populateResults = async (response) => {
     }
     // populate new list of allergens
     if (!response.safe) {
-
         for (i = 0; i < allergens.length; i++) {
             let li = document.createElement('li');
             li.innerText = allergens[i];
+            list.appendChild(li);
+        }
+    };
+
+    // populate any possible allergens
+    if (risks.length > 0) {
+        for (i = 0; i < risks.length; i++) {
+            let li = document.createElement('li');
+            li.innerText = `${risks[i][0]} may be related to ${risks[i][1]}`;
             list.appendChild(li);
         }
     }

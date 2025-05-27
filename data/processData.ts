@@ -8,7 +8,6 @@ JSON.parse(dataString, (key:string, value:any) => {
     }
 });
 
-
 export const fetchSourceData = () => {
     return normalizeList(fullList);
 };
@@ -16,10 +15,9 @@ export const normalizeList = (input: string[]): string[] => {
    return input.map((word) => word.toLowerCase())
 }
 
-export const searchData = (data: string[], input: string[]) => {
-    const normalizedInput = normalizeList(input);
+export const searchData = (data: string[], input: string[]): string[] => {
     const forbiddenList = [];
-    normalizedInput.forEach((item) => {
+    input.forEach((item) => {
         data.filter((ingredient) => {
             if (ingredient === item) {
                 forbiddenList.push(ingredient);
@@ -27,4 +25,16 @@ export const searchData = (data: string[], input: string[]) => {
         })
    })
    return forbiddenList;
+}
+
+export const pickySearch = (data: string[], input: string[]): string[][] => {
+    const reviewList: string[][] = [];
+    input.forEach((item) => {
+        data.filter((ingredient) => {
+            if (item.includes(ingredient)) {
+                reviewList.push([item, ingredient])
+            }
+        })
+    })
+    return reviewList;
 }

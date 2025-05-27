@@ -1,5 +1,4 @@
 * {
-    margin: .5em;
     box-sizing: border-box;
 }
 
@@ -14,16 +13,26 @@ body {
         'header'
         'main'
         'footer';
-        gap: 1em;
 }
 
-.header {
+#header {
     grid-area: header;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+.disclaimer {
+    grid-area: header;
+    margin-left: 30%;
+    font-size: small;
+    font-weight: bolder;
+    width: 200px;
 }
 
 #formContainer {
     grid-area: main;
-    margin: 2em;
+    margin-left: 30%;
+    margin-bottom: 5%;
 }
 
 h3 {
@@ -38,8 +47,9 @@ h3 {
 
 #buttonContainer {
     grid-area: main;
-    margin: 2em;
-    margin-left: 25%;
+    margin-left: 40%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 #submitButton {
@@ -56,5 +66,7 @@ h3 {
 
 #results {
     grid-area: main;
-    margin: 2em;
+    margin-left: 30%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
