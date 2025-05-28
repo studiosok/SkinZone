@@ -1,14 +1,17 @@
 import fs from 'fs';
 
-const dataString = fs.readFileSync('./data/allergenList.json', 'utf8');
-const fullList: string[] = [];
-JSON.parse(dataString, (key:string, value:any) => {
-    if (typeof value === 'string') {
-        fullList.push(value);
-    }
-});
 
-export const fetchSourceData = () => {
+
+export const fetchSourceData = (data?: string) => {
+    if (!data) {
+        data = fs.readFileSync('./data/allergenList.json', 'utf8');
+    }
+    const fullList: string[] = [];
+    JSON.parse(data, (key:string, value:any) => {
+        if (typeof value === 'string') {
+            fullList.push(value);
+        }
+    });
     return normalizeList(fullList);
 };
 export const normalizeList = (input: string[]): string[] => {

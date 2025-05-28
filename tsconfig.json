@@ -9,7 +9,7 @@
       "sourceMap": true,
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
-      "allowSyntheticDefaultImports": true
+      "allowSyntheticDefaultImports": true,
     },
     "exclude": [
       "./node_modules",
