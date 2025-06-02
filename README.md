@@ -21,3 +21,5 @@ TODO:
 - ~~populate full possible text~~
 
 - ~~Two part search - initial search as is; second search more sensitive, flags possible allergens for further (human) review~~
+- update liscense
+- update disclaimer: no guarantee of accuracy

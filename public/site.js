@@ -1,3 +1,5 @@
+// TODO: error handling and try/catch
+
 const submitText = async () => {
     const data = await document.getElementById("ingredients").value;
 

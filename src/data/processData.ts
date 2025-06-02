@@ -1,10 +1,8 @@
 import fs from 'fs';
 
-
-
 export const fetchSourceData = (data?: string) => {
     if (!data) {
-        data = fs.readFileSync('./data/allergenList.json', 'utf8');
+        data = fs.readFileSync('./src/data/allergenList.json', 'utf8');
     }
     const fullList: string[] = [];
     JSON.parse(data, (key:string, value:any) => {

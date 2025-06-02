@@ -1,6 +1,6 @@
 import { Request } from 'express';
-import { fetchSourceData, searchData, pickySearch } from '../../data/processData.js';
-import { normalizeInput } from '../../data/processInput.js';
+import { fetchSourceData, searchData, pickySearch } from '../data/processData.js';
+import { normalizeInput } from '../data/processInput.js';
 import { SearchResBody } from '../types.js';
 
 
@@ -27,7 +27,6 @@ export const search = async (req: Request, res: SearchResBody) => {
                 return !result.includes(item[0])
             })
         }
-
         res.send({ safe: safe, allergens: result, risks })
     }
     catch(err) {
