@@ -2,7 +2,7 @@ import { describe, expect, test } from '@jest/globals';
 import { search } from '../src/controllers/search';
 
 /* Test todo: 
-    - mock api
+    - mock api -> currently stuck here. jest does not handle __dirname import, inclusion of babel still errs. skipping these for now
     - test dedupe filter dedupes
     - test accurate safe determination
     - test accurate handling of request body
@@ -36,21 +36,21 @@ const expectedUnsafeOutput = {
 }
 
 describe('dedupe', () => {
-    test('Successfully deduplicates allergen and risk lists where needed', () => {});
+    test.skip('Successfully deduplicates allergen and risk lists where needed', () => {});
 });
 
 describe('safety', () => {
-    test('Safe flag is correctly set', () => {});
+    test.skip('Safe flag is correctly set', () => {});
 });
 
 describe('functions', () => {
-    test('Expected function calls are made and handled', () => {});
+    test.skip('Expected function calls are made and handled', () => {});
 });
 
 describe('input error handling', () => {
-    test('Inadequate input length throws 400 with message', () => {});
+    test.skip('Inadequate input length throws 400 with message', () => {});
 });
 
 describe('error handling', () => {
-    test('Failure in handler throws 404 and returns appropriate message for front end', () => {});
+    test.skip('Failure in handler throws 404 and returns appropriate message for front end', () => {});
 });

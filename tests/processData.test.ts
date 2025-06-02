@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { describe, expect, test } from '@jest/globals';
-import { fetchSourceData, searchData, pickySearch } from '../data/processData';
+import { fetchSourceData, searchData, pickySearch } from '../src/data/processData';
 
 /* Test todo: 
     - test data fetch works as expected

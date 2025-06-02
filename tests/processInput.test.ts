@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { normalizeInput } from '../data/processInput';
+import { normalizeInput } from '../src/data/processInput';
 
 /* Test todo: 
     - test normalization functions work as expected for pattern matched input
