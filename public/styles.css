@@ -70,3 +70,19 @@ h3 {
     margin-top: 5%;
     margin-bottom: 5%;
 }
+
+.warn {
+    background-color: rgba(255, 208, 0, 0.225);
+    max-width: fit-content;
+}
+
+.danger {
+    background-color: rgba(198, 3, 3, 0.225);
+    font-weight: bold;
+    max-width: fit-content;
+}
+
+.alert {
+    padding: 20px;
+    background-color: rgba(198, 3, 3, 0.225);
+}
