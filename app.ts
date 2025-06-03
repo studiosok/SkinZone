@@ -1,4 +1,4 @@
-import express, { Request, Response, NextFunction } from 'express';
+import express from 'express';
 import path from 'path';
 
 // Route Handlers
@@ -12,10 +12,6 @@ const app = express();
 app.set('port', process.env.PORT || 4000);
 
 app.use(express.json());
-
-// app.use((err, req: Request, res: Response, next: NextFunction) => {
-//     res.status(err.status).send({error: err.message});
-// })
 
 // Static Files
 app.use(

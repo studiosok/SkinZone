@@ -25,7 +25,7 @@ export const search = async (req: Request, res: SearchResBody) => {
       if (result.length < 1 && risks.length < 1) {
         safe = true;
       }
-      // dedupe possibles and exact matches
+      // Dedupe possibles and exact matches
       if (result.length > 0 && risks.length > 0) {
         risks = risks.filter((item) => {
           return !result.includes(item[0]);
