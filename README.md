@@ -14,12 +14,12 @@ TODO:
     - ~~remove periods from end of list~~
     - ~~dedupe input~~
     - ~~remove linebreaks where present~~
-- unit tests
-- error handling
+- unit tests -> config issues with jest and import.meta.dirname
+- ~~error handling~~
 - styling
 - ~~dedupe possible and found allergen lists~~
 - ~~populate full possible text~~
 
 - ~~Two part search - initial search as is; second search more sensitive, flags possible allergens for further (human) review~~
 - update liscense
-- update disclaimer: no guarantee of accuracy
+- ~~update disclaimer: no guarantee of accuracy~~
