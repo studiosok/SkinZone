@@ -7,6 +7,7 @@ const submitText = async () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Accept": "application/json",
         "Access-Control-Allow-Origin": "origin",
       },
       body: jsonData,
