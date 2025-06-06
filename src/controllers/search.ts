@@ -11,8 +11,6 @@ export const search = async (req: Request, res: SearchResBody) => {
   try {
     let safe: boolean = false;
     const input = req.body.data;
-    console.log('req body:', req.body);
-    console.log('input: ', input)
     if (input.length < 1) {
       res.status(400).send("No input given");
       return;
