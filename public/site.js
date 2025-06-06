@@ -1,7 +1,7 @@
 const submitText = async () => {
   const data = await document.getElementById("ingredients").value;
 
-  const jsonData = JSON.stringify({ data: data });
+  const jsonData = JSON.stringify({ data });
   try {
     await fetch("/search", {
       method: "POST",
